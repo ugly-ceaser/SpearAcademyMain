@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+
+    <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>Add Meta Operations</h1>
+    <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+        <li class="breadcrumb-item active">Meta</li>
+        <li class="breadcrumb-item active"><a>Add Meta </a></li>
+    </ol>
+             
+</section>
+<br />
+<div class="card-footer">
+    <input type="submit"  value="Meta List" class="btn btn-primary"/>
+</div>
+
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="box box-primary">
+                @using (Html.BeginForm("Index", "Meta", FormMethod.Post))
+                {
+
+                    @Html.Partial("partials/MetaAddform");
+
+                }
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+   
+
+
+

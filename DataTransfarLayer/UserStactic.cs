@@ -8,7 +8,7 @@ namespace DataTransfarLayer
 {
     public static class UserStactic
     {
-        public static int UserId { get; set; }
+        public static int UserId { get; set; } = 1;
 
         public static bool IsAdmin { get; set; }
 

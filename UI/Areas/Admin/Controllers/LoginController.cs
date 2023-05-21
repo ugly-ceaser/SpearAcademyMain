@@ -35,7 +35,7 @@ namespace UI.Areas.Admin.Controllers
                     UserStactic.ImagePath = user.ImagePath;
                     UserStactic.NameSurname = user.Name;
 
-                    LogDataLogic.Addlog(1, "Login", 13);
+                    LogDataLogic.Addlog(General.proccessType.Login, General.TableName.Login, 13);
                     
 
                     return RedirectToAction("Index", "Post");

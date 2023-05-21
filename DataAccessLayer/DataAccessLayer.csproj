@@ -75,6 +75,7 @@
     <Compile Include="Meta.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="MetaAccess.cs" />
     <Compile Include="Post.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>

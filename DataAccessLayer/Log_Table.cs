@@ -21,5 +21,7 @@ namespace DataAccessLayer
         public int ProcessType { get; set; }
         public string ProcessCategoryType { get; set; }
         public System.DateTime ProcessDate { get; set; }
+
+        
     }
 }
