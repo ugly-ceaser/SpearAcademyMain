@@ -62,5 +62,37 @@ namespace UI.Areas.Admin.Controllers
 
             return View(MetaList);
         }
+
+        public ActionResult Update(int? ID)
+        {
+            MetaDataTransfer model = MetalDatalogic.getMetaById((int)ID);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(MetaDataTransfer model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (MetalDatalogic.UpdateMeta(model))
+                {
+                    ViewBag.ProccessState = General.Messages.UpdateSuccess;
+
+
+                }
+                else
+                {
+                    ViewBag.ProcessState = General.Messages.GeneralError;
+                }
+
+            }
+            else
+            {
+                ViewBag.ProccessState = General.Messages.EmptyArea;
+            }
+
+            return View(model);
+        }
     }
 }

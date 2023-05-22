@@ -27,8 +27,11 @@
         <div class="col-md-9">
             @Html.Partial("~/Areas/Admin/Views/Shared/MessageForm.cshtml")
             <div class="box box-primary">
-                @Html.Partial("partials/MetaAddForm")
-            </div>
+                @using (Html.BeginForm("Index", "Meta", FormMethod.Post))
+                {
+                    @Html.Partial("partials/MetaAddForm")
+                }
+                </div>
 
         </div>
     </div>

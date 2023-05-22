@@ -40,5 +40,19 @@ namespace DataLogicLayer
 
             return MetaList;
         }
+
+        public MetaDataTransfer getMetaById(int ID)
+        {
+            MetaDataTransfer model = MetaDataAccess.getMetaDataById(ID);
+
+            return model;
+        }
+
+        public bool UpdateMeta(MetaDataTransfer model)
+        {
+            MetaDataAccess.UpdateMeta(model);
+            LogDataAccess.AddLog(General.proccessType.MetaUpdate, General.TableName.Meta, model.MetaId);
+            return true;
+        }
     }
 }

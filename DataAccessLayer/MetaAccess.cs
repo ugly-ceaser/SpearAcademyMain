@@ -49,5 +49,40 @@ namespace DataAccessLayer
 
             return AllMetaData;
         }
+
+        public MetaDataTransfer getMetaDataById(int ID)
+        {
+            Meta Metadata = database.Metas.First(x => x.ID == ID);
+
+            MetaDataTransfer Object = new MetaDataTransfer();
+
+            Object.MetaId = Metadata.ID;
+            Object.MetaName = Metadata.Name;
+            Object.MetaContent = Metadata.MetaContent;
+
+            return Object;
+        }
+
+        public void UpdateMeta(MetaDataTransfer model)
+        {
+            try
+            {
+                Meta Object = database.Metas.First(x => x.ID == model.MetaId);
+
+                Object.MetaContent = model.MetaContent;
+                Object.Name = model.MetaName;
+                Object.LastUpdateDate = DateTime.Now;
+                Object.LastUpdateUserID = UserStactic.UserId;
+
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+
+
+        }
     }
 }
