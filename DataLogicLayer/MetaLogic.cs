@@ -31,5 +31,14 @@ namespace DataLogicLayer
             
 
         }
+
+        public  List<MetaDataTransfer> getAllMetaData()
+        {
+            List<MetaDataTransfer> MetaList = new List<MetaDataTransfer>();
+
+            MetaList = MetaDataAccess.getMetaData();
+
+            return MetaList;
+        }
     }
 }

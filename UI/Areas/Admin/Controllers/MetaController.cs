@@ -55,12 +55,12 @@ namespace UI.Areas.Admin.Controllers
 
         public ActionResult MetaList()
         {
-            List <MetaDataTransfer> modelList = new List<MetaDataTransfer>();
+            List <MetaDataTransfer> MetaList = new List<MetaDataTransfer>();
+
+            MetaList = MetalDatalogic.getAllMetaData();
 
 
-
-
-            return View(modelList);
+            return View(MetaList);
         }
     }
 }
