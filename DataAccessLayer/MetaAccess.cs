@@ -7,19 +7,47 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    class MetaAccess:PostContext
+    public class MetaAccess:PostContext
     {
-        public static void addMeta(MetaDataTransfer MetaData)
+        public  int  addMeta(Meta MetaData)
         {
-            Meta MetaModel = new Meta();
 
-            MetaModel.ID = MetaData.MetaId;
-            MetaModel.MetaContent = MetaData.MetaContent;
-            MetaModel.Name = MetaData.MetaName;
+            try
+            {
+                database.Metas.Add(MetaData);
+                database.SaveChanges();
 
-            database.Metas.Add(MetaModel);
-            database.SaveChanges();
+                return MetaData.ID;
 
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+           
+
+        }
+
+        public List<MetaDataTransfer> getMetaData()
+        {
+            List<MetaDataTransfer> AllMetaData = new List<MetaDataTransfer>();
+
+            List<Meta> AllMeta = database.Metas.Where(x=>x.isDeleted == false).OrderBy(x=>x.AddDate).ToList();
+
+            foreach(var Meta in AllMeta)
+            {
+                MetaDataTransfer Object = new MetaDataTransfer();
+
+                Object.MetaId = Meta.ID;
+                Object.MetaName = Meta.Name;
+                Object.MetaContent = Meta.MetaContent;
+
+                AllMetaData.Add(Object);
+
+            }
+
+
+            return AllMetaData;
         }
     }
 }

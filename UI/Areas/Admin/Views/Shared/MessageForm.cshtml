@@ -1,0 +1,57 @@
+﻿@using UI.Areas.Admin
+
+@if (ViewBag.ProccessState == DataLogicLayer.General.Messages.AddSuccess)
+{
+    <div class="alert alert-success">
+        <strong>
+            Success!! Add operation was successfull !!
+        </strong>
+    </div>
+}
+else if (ViewBag.ProccessState == DataLogicLayer.General.Messages.GeneralError)
+{
+    <div class="alert alert-danger">
+        <strong>
+            Error !! operation was not successfull !!
+        </strong>
+
+    </div>
+}
+else if (ViewBag.ProccessState == DataLogicLayer.General.Messages.UpdateSuccess)
+{
+    <div class="alert alert-success">
+        <strong>
+            Success !! Update operation was  successfull !!
+        </strong>
+
+    </div>
+}
+else if (ViewBag.ProccessState == DataLogicLayer.General.Messages.MissingImage)
+{
+    <div class="alert alert-danger">
+        <strong>
+            Error !! Image file is file is missing !!
+        </strong>
+
+    </div>
+}
+else if (ViewBag.ProccessState == DataLogicLayer.General.Messages.ExtensionError)
+{
+    <div class="alert alert-danger">
+        <strong>
+            Error !!  file extension is not valid !!
+        </strong>
+
+    </div>
+}
+else if (ViewBag.ProccessState == DataLogicLayer.General.Messages.EmptyArea)
+{
+    <div class="alert alert-danger">
+        <strong>
+            Error !!  please fill all required field !!
+        </strong>
+
+    </div>
+}
+
+

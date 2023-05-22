@@ -98,13 +98,18 @@ namespace DataLogicLayer
 
             public static string Comment = "Comment";
             public static string Contact = "Contact";
-           
 
+        }
+        public static class Messages
+        {
+            public static int AddSuccess = 1;
+            public static int UpdateSuccess = 2;
+            public static int EmptyArea = 3;
 
+            public static int MissingImage = 4;
+            public static int ExtensionError = 5;
 
-
-
-
+            public static int GeneralError = 6;
 
         }
     }

@@ -133,10 +133,25 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\adminlte.min.css" />
     <Content Include="Areas\Admin\Content\css\all.min.css" />
+    <Content Include="Areas\Admin\Content\css\buttons.bootstrap4.min.css" />
+    <Content Include="Areas\Admin\Content\css\dataTables.bootstrap4.min.css" />
     <Content Include="Areas\Admin\Content\css\icheck-bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\css\responsive.bootstrap4.min.css" />
     <Content Include="Areas\Admin\Content\js\adminlte.min.js" />
     <Content Include="Areas\Admin\Content\js\bootstrap.bundle.min.js" />
+    <Content Include="Areas\Admin\Content\js\buttons.bootstrap4.min.js" />
+    <Content Include="Areas\Admin\Content\js\buttons.colVis.min.js" />
+    <Content Include="Areas\Admin\Content\js\buttons.html5.min.js" />
+    <Content Include="Areas\Admin\Content\js\buttons.print.min.js" />
+    <Content Include="Areas\Admin\Content\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Areas\Admin\Content\js\dataTables.buttons.min.js" />
+    <Content Include="Areas\Admin\Content\js\dataTables.responsive.min.js" />
+    <Content Include="Areas\Admin\Content\js\jquery.dataTables.min.js" />
     <Content Include="Areas\Admin\Content\js\jquery.min.js" />
+    <Content Include="Areas\Admin\Content\js\jszip.min.js" />
+    <Content Include="Areas\Admin\Content\js\pdfmake.min.js" />
+    <Content Include="Areas\Admin\Content\js\responsive.bootstrap4.min.js" />
+    <Content Include="Areas\Admin\Content\js\vfs_fonts.js" />
     <Content Include="Areas\Admin\Content\temImage\AdminLTELogo.png" />
     <Content Include="Areas\Admin\Content\temImage\avatar.png" />
     <Content Include="Areas\Admin\Content\temImage\avatar2.png" />
@@ -158,6 +173,8 @@
     <Content Include="Areas\Admin\Views\Shared\AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Meta\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Meta\partials\MetaAddform.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\MessageForm.cshtml" />
+    <Content Include="Areas\Admin\Views\Meta\MetaList.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -204,6 +221,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{A1FF344B-0505-4BAB-B6D7-368F6FDF3F0E}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataLogicLayer\DataLogicLayer.csproj">
       <Project>{64318af4-e79f-4e9f-903f-c90c2eb32ad4}</Project>
       <Name>DataLogicLayer</Name>

@@ -10,6 +10,10 @@
     <!-- Font Awesome -->
 
     <link href="~/Areas/Admin/Content/css/all.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Areas/Admin/Content/css/buttons.bootstrap4.min.css">
     <!-- icheck bootstrap -->
 
     <link href="~/Areas/Admin/Content/css/icheck-bootstrap.min.css" rel="stylesheet" />
@@ -21,14 +25,13 @@
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
-        
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="../../index3.html" class="brand-link">
                 <img src="~/Areas/Admin/Content/temImage/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" />
-               
+
                 <span class="brand-text font-weight-light">Spear Academy</span>
             </a>
 
@@ -38,8 +41,8 @@
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
 
-                        <img src="~/Areas/Admin/Content/temImage/avatar.png" class="img-circle elevation-2" alt="User Image"/>
-                        
+                        <img src="~/Areas/Admin/Content/temImage/avatar.png" class="img-circle elevation-2" alt="User Image" />
+
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">Alexander Pierce</a>
@@ -47,8 +50,6 @@
                 </div>
 
                 <!-- SidebarSearch Form -->
-               
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -695,8 +696,6 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-           
-
             <!-- Main content -->
             <section class="content">
 
@@ -706,7 +705,7 @@
             </section>
             <!-- /.content -->
         </div>
-     
+
 
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
@@ -727,8 +726,39 @@
     <!-- Bootstrap 4 -->
 
     <script src="~/Areas/Admin/Content/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Areas/Admin/Content/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/dataTables.responsive.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/dataTables.buttons.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/jszip.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/pdfmake.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/vfs_fonts.js"></script>
+    <script src="~/Areas/Admin/Content/js/buttons.html5.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/buttons.print.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/buttons.colVis.min.js"></script>
     <!-- AdminLTE App -->
 
     <script src="~/Areas/Admin/Content/js/adminlte.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
 </body>
 </html>
