@@ -14,7 +14,14 @@ namespace DataAccessLayer
     
     public partial class ProcessType
     {
+        public ProcessType()
+        {
+            this.Log_Table = new HashSet<Log_Table>();
+        }
+    
         public int ID { get; set; }
         public string ProcessName { get; set; }
+    
+        public virtual ICollection<Log_Table> Log_Table { get; set; }
     }
 }

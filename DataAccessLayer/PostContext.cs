@@ -8,6 +8,7 @@ namespace DataAccessLayer
 {
     public class PostContext
     {
+
         public static POSTDATAEntities database = new POSTDATAEntities();
     }
 }

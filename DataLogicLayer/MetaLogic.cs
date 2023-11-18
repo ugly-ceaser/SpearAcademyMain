@@ -19,8 +19,8 @@ namespace DataLogicLayer
             MetaModel.ID = MetaDataObject.MetaId;
             MetaModel.MetaContent = MetaDataObject.MetaContent;
             MetaModel.Name = MetaDataObject.MetaName;
-            MetaModel.AddDate = DateTime.Now;
-            MetaModel.LastUpdateDate = DateTime.Now;
+            MetaModel.AddDate = DateTime.UtcNow;
+            MetaModel.LastUpdateDate = DateTime.UtcNow;
             MetaModel.LastUpdateUserID = UserStactic.UserId;
 
             var MetaId = MetaDataAccess.addMeta(MetaModel);

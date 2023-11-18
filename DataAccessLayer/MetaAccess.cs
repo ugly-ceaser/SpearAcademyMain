@@ -71,8 +71,10 @@ namespace DataAccessLayer
 
                 Object.MetaContent = model.MetaContent;
                 Object.Name = model.MetaName;
-                Object.LastUpdateDate = DateTime.Now;
+                Object.LastUpdateDate = DateTime.UtcNow;
                 Object.LastUpdateUserID = UserStactic.UserId;
+
+                
 
 
             }

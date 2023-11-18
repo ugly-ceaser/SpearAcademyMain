@@ -27,5 +27,8 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> DeletedDate { get; set; }
         public Nullable<int> LastUpdateUserID { get; set; }
         public Nullable<System.DateTime> LastUpdateDate { get; set; }
+    
+        public virtual Post Post { get; set; }
+        public virtual T_User T_User { get; set; }
     }
 }

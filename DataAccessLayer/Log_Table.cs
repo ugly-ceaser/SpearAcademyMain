@@ -20,8 +20,9 @@ namespace DataAccessLayer
         public int ProcessID { get; set; }
         public int ProcessType { get; set; }
         public string ProcessCategoryType { get; set; }
-        public System.DateTime ProcessDate { get; set; }
+        public System.DateTime ProcessDate { get; set; } = DateTime.UtcNow;
 
-        
+
+        public virtual ProcessType ProcessType1 { get; set; }
     }
 }
