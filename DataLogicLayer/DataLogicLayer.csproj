@@ -46,6 +46,7 @@
     <Compile Include="LogDataLogic.cs" />
     <Compile Include="MetaLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialMediaDataLogic.cs" />
     <Compile Include="UserDataLogic.cs" />
   </ItemGroup>
   <ItemGroup>

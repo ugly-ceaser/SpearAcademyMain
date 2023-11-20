@@ -50,7 +50,7 @@ namespace DataLogicLayer
             return model;
         }
 
-        public bool UpdateMeta(SocialMediaDataTransfer model)
+        public bool UpdateSocial(SocialMediaDataTransfer model)
         {
             SocialMediaDataAccess.UpdateSocialMedia(model);
             LogDataAccess.AddLog(General.proccessType.SocialUpdate, General.TableName.Social, model.SocialId);

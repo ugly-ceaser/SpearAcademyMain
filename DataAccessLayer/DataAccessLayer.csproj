@@ -108,6 +108,7 @@
     <Compile Include="SocialMedia.cs">
       <DependentUpon>postmodel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SocialMediaDataAccess.cs" />
     <Compile Include="T_User.cs">
       <DependentUpon>postmodel.tt</DependentUpon>
     </Compile>

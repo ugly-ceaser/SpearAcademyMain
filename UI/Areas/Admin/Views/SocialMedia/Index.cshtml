@@ -4,21 +4,18 @@
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
-
-
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>Update Meta Operations</h1>
+    <h1>Add Social Media Operations</h1>
     <ol class="breadcrumb float-sm-left">
         <li class="breadcrumb-item"><a>Admin</a></li>
-        <li class="breadcrumb-item">Meta</li>
-        <li class="breadcrumb-item active"><a>Add Meta </a></li>
+        <li class="breadcrumb-item">Social Media</li>
+        <li class="breadcrumb-item active"><a>Add Social Media </a></li>
     </ol>
 
 </section>
 <br />
 <div class="card-footer">
-    <a class="btn btn-primary" href="/Admin/Meta/MetaList">Meta List</a>
+    <a class="btn btn-primary" href="/Admin/SocialMedia/SocialMediaList">Social Media List</a>
 </div>
 
 
@@ -27,18 +24,15 @@
         <div class="col-md-9">
             @Html.Partial("~/Areas/Admin/Views/Shared/MessageForm.cshtml")
             <div class="box box-primary">
-                @using (Html.BeginForm("Update", "Meta", FormMethod.Post))
+                @using (Html.BeginForm("Index", "SocialMedia", FormMethod.Post))
                 {
-                    @Html.Partial("partial/MetaAddForm")
+                  @Html.Partial("partial/SocialMediaAddForm")
                 }
-                </div>
+            </div>
 
         </div>
     </div>
 
 
 </section>
-
-
-
 

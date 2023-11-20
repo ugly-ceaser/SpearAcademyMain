@@ -63,7 +63,7 @@ namespace UI.Areas.Admin.Controllers
             return View(MetaList);
         }
 
-        public ActionResult Update(int? ID)
+        public ActionResult UpdateMeta(int? ID)
         {
             MetaDataTransfer model = MetalDatalogic.getMetaById((int)ID);
 
@@ -71,7 +71,7 @@ namespace UI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(MetaDataTransfer model)
+        public ActionResult UpdateMeta(MetaDataTransfer model)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +93,17 @@ namespace UI.Areas.Admin.Controllers
             }
 
             return View(model);
+        }
+
+
+
+        public ActionResult GetMetaById(int ID)
+        {
+            MetaDataTransfer MetaObject = new MetaDataTransfer();
+
+            MetaObject = MetalDatalogic.getMetaById(ID);
+
+            return View(MetaObject);
         }
     }
 }

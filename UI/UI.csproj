@@ -2229,7 +2229,7 @@
     <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Meta\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Meta\partials\MetaAddform.cshtml" />
+    <Content Include="Areas\Admin\Views\Meta\partial\MetaAddform.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\MessageForm.cshtml" />
     <Content Include="Areas\Admin\Views\Meta\MetaList.cshtml" />
     <Content Include="Areas\Admin\Content\fontawesome-free-6.4.0-web\less\brands.less" />
@@ -2286,6 +2286,8 @@
     <Content Include="Areas\Admin\Content\fontawesome-free-6.4.0-web\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Areas\Admin\Content\fontawesome-free-6.4.0-web\webfonts\fa-v4compatibility.woff2" />
     <Content Include="Areas\Admin\Views\Meta\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\SocialMedia\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SocialMedia\partial\SocialMediaAddForm.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2316,7 +2318,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\SocialMedia\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
