@@ -2288,6 +2288,9 @@
     <Content Include="Areas\Admin\Views\Meta\Update.cshtml" />
     <Content Include="Areas\Admin\Views\SocialMedia\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SocialMedia\partial\SocialMediaAddForm.cshtml" />
+    <Content Include="Areas\Admin\Views\SocialMedia\SocialList.cshtml" />
+    <Content Include="Areas\Admin\Views\Meta\UpdateMeta.cshtml" />
+    <Content Include="Areas\Admin\Views\SocialMedia\UpdateSocial.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2317,6 +2320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Content\SocialMediaImages\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

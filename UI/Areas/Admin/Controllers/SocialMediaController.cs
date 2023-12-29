@@ -24,8 +24,18 @@ namespace UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Index(SocialMediaDataTransfer SocialMediaObject)
         {
-            if (ModelState.IsValid)
+
+            if(SocialMediaObject.SocialMediaImage == null)
             {
+
+                ViewBag.ProcessState = General.Messages.MissingImage;
+                
+            }
+
+           else if (ModelState.IsValid)
+            {
+
+                HttpPostedFileBase HttpPostedFile = SocialMediaObject.SocialMediaImage;
                 if (SocialMediaDatalogic.AddSocialMediaData(SocialMediaObject))
                 {
                     ViewBag.ProccessState = General.Messages.AddSuccess;
@@ -62,10 +72,14 @@ namespace UI.Areas.Admin.Controllers
         
         }
 
-        public ActionResult UpdateSocial()
+        public ActionResult UpdateSocial(int ID)
         {
-            SocialMediaDataTransfer SocialDataModel = new SocialMediaDataTransfer();
-            return View(SocialDataModel);
+
+           
+            SocialMediaDataTransfer SocialMediaObject = new SocialMediaDataTransfer();
+
+            SocialMediaObject = SocialMediaDatalogic.GetSocialMediaById(ID);
+            return View(SocialMediaObject);
         }
 
         [HttpPost]
@@ -90,16 +104,18 @@ namespace UI.Areas.Admin.Controllers
                 ViewBag.ProccessState = General.Messages.EmptyArea;
 
             }
-            return View();
+            return RedirectToAction("SocialList");
         }
 
-        public ActionResult GetSocialById(int ID)
+        public ActionResult DeleteSocialById(int ID)
         {
-            SocialMediaDataTransfer SocialMediaObject = new SocialMediaDataTransfer();
+           
 
-            SocialMediaObject = SocialMediaDatalogic.GetSocialMediaById(ID);
+            var Feedback = SocialMediaDatalogic.DeleteSocialMediaById(ID);
 
-            return View(SocialMediaObject);
+            
+
+            return RedirectToAction("SocialList");
         }
     }
 }

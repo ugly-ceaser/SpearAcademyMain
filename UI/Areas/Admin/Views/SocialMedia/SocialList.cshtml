@@ -1,22 +1,21 @@
-﻿@model List<DataTransfarLayer.MetaDataTransfer>
-
+﻿@model List<DataTransfarLayer.SocialMediaDataTransfer>
 @{
-    ViewBag.Title = "MetaList";
+    ViewBag.Title = "Social Media List";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
 <section class="content-header">
-    <h1>Meta Lists</h1>
+    <h1>Add Social Media Operations</h1>
     <ol class="breadcrumb float-sm-left">
         <li class="breadcrumb-item"><a>Admin</a></li>
-        <li class="breadcrumb-item">Meta</li>
-        <li class="breadcrumb-item active"><a>Meta List </a></li>
+        <li class="breadcrumb-item">Social Media</li>
+        <li class="breadcrumb-item active"><a>Add Social Media </a></li>
     </ol>
 
 </section>
 <br />
 <div class="card-footer">
-    <a class="btn btn-primary" href="/Admin/Meta/Index">Add Meta</a>
+    <a class="btn btn-primary" href="/Admin/SocialMedia/Index">Add Social Media</a>
 </div>
 
 
@@ -32,23 +31,23 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Meta Content</th>
+                        <th>Image Path</th>
                         <th align="center">Action</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var meta in Model)
+                    @foreach (var SocialMedia in Model)
                     {
-                        <tr id="a_@meta.MetaId">
-                            <td>@meta.MetaName</td>
+                        <tr id="a_@SocialMedia.SocialId">
+                            <td>@SocialMedia.SocialName</td>
                             <td>
-                                @meta.MetaContent
+                                @SocialMedia.ImagePath
                             </td>
                             <td align="center">
-                                <a href="/Admin/Meta/UpdateMeta/@meta.MetaId" class="btn btn-primary"><i class="fa-solid fa-file-pen"></i><br />Update</a>
+                                <a href="/Admin/SocialMedia/UpdateSocial/@SocialMedia.SocialId" class="btn btn-primary"><i class="fa-solid fa-file-pen"></i><br />Update</a>
 
-                                <a  href="/Admin/Meta/DeleteMeta/@meta.MetaId" class="btn btn-danger"><i class="fa-solid fa-trash"></i><br />Delete</a>
+                                <a href="/Admin/SocialMedia/DeleteSocialById/@SocialMedia.SocialId" class="btn btn-danger"><i class="fa-solid fa-trash"></i><br />Delete</a>
                             </td>
 
                         </tr>
@@ -70,3 +69,4 @@
         <!-- /.card-body -->
     </div>
 </section>
+

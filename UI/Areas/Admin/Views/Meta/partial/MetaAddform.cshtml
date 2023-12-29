@@ -9,7 +9,7 @@
     <div class="form-group">
         <label class="form-label">Meta Content</label>
         <div class="col-md-10">
-            @Html.TextBoxFor(x => x.MetaContent, new { @class = "form-control", @placeholder = "Meta Content" })
+            @Html.TextBoxFor(x => x.MetaContent, new { @class = "form-control", @placeholder = "Meta Content", @value = "x.MetaContent" })
             @Html.ValidationMessageFor(x => x.MetaContent, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="form-group">
         <label class="form-label">Name</label>
         <div class="col-md-10">
-            @Html.DropDownList("MetaName", new SelectList(new[] { "Keyword", "Descriptions", "Author" }), new { @class = "form-control select2" })
+            @Html.DropDownList("MetaName", new SelectList(new[] { "Keyword", "Descriptions", "Author" }), new { @class = "form-control select2", @value = "Model.MetaName" })
 
         </div>
     </div>
@@ -29,15 +29,28 @@
 
 
 
-    
 
 
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+    @if (Model.MetaName == null)
+    {
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </div>
+
+    }
 
 
 </div>

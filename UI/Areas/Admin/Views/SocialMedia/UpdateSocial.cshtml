@@ -1,15 +1,18 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Update Social Media";
     Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
 }
 
+
+
+<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>Add Social Media Operations</h1>
+    <h1>Update Sociial Operations</h1>
     <ol class="breadcrumb float-sm-left">
         <li class="breadcrumb-item"><a>Admin</a></li>
-        <li class="breadcrumb-item">Social Media</li>
-        <li class="breadcrumb-item active"><a>Add Social Media </a></li>
+        <li class="breadcrumb-item">Social</li>
+        <li class="breadcrumb-item active"><a>Update Social Media </a></li>
     </ol>
 
 </section>
@@ -20,13 +23,15 @@
 
 
 <section class="content">
+   
+
     <div class="row">
         <div class="col-md-9">
             @Html.Partial("~/Areas/Admin/Views/Shared/MessageForm.cshtml")
             <div class="box box-primary">
-                @using (Html.BeginForm("Index", "SocialMedia", FormMethod.Post))
+                @using (Html.BeginForm("UpdateSocial", "SocialMedia", FormMethod.Post))
                 {
-                  @Html.Partial("partial/SocialMediaAddForm")
+                    @Html.Partial("partial/SocialMediaAddForm")
                 }
             </div>
 
@@ -35,4 +40,7 @@
 
 
 </section>
+
+
+
 

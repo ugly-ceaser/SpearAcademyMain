@@ -91,5 +91,16 @@ namespace DataAccessLayer
             }
             
         }
+        
+        public bool DeleteSocialMediaById(int ID)
+        {
+            SocialMedia Object = database.SocialMedias.First(x => x.ID == ID);
+
+            Object.isDeleted = true;
+
+            database.SaveChanges();
+
+            return true;
+        }
     }
 }

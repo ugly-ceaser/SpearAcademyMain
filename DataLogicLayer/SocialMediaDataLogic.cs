@@ -50,6 +50,17 @@ namespace DataLogicLayer
             return model;
         }
 
+        public bool DeleteSocialMediaById(int ID)
+        {
+            var feedBack = SocialMediaDataAccess.DeleteSocialMediaById(ID);
+
+            if (feedBack)
+            {
+                LogDataAccess.AddLog(General.proccessType.SocialDelete, General.TableName.Social, ID);
+            }
+
+            return feedBack;
+        }
         public bool UpdateSocial(SocialMediaDataTransfer model)
         {
             SocialMediaDataAccess.UpdateSocialMedia(model);
